@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Saha Malaki — operations management and decision sciences researcher. Postdoctoral Fellow, Rotman School of Management, University of Toronto. On the 2026-27 academic job market.">
+<style>
+:root{color-scheme:light;padding-top:env(safe-area-inset-top,0);padding-bottom:env(safe-area-inset-bottom,0)}
+body{margin:0}
+img{max-width:100%}
+[hidden]{display:none!important}
+</style>
+</head>
+<body>
+<title>Saha Malaki</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400;0,500;0,600;1,400&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+<style>
+/* Layout: one quiet reading column (~70ch), slim sticky nav, sections keyed by small-caps eyebrows.
+   The mathematics-publishing serif (STIX) carries headings; a plain humanist sans carries everything else. */
+:root {
+  --bg: #fafaf7;
+  --surface: #ffffff;
+  --ink: #1d2733;
+  --muted: #5b6774;
+  --accent: #174a6c;
+  --link: #1a56c2;
+  --rule: #e2e5e3;
+  --chip: #eef1ee;
+  --serif: "STIX Two Text", Georgia, "Times New Roman", serif;
+  --sans: "Source Sans 3", "Segoe UI", Helvetica, Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #131820; --surface: #1a212b; --ink: #e7eaee; --muted: #9aa6b2;
+    --accent: #88b8d8; --link: #85aef0; --rule: #2a3440; --chip: #222b36;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #131820; --surface: #1a212b; --ink: #e7eaee; --muted: #9aa6b2;
+  --accent: #88b8d8; --link: #85aef0; --rule: #2a3440; --chip: #222b36;
+  color-scheme: dark;
+}
+body {
+  background: var(--bg); color: var(--ink);
+  font-family: var(--sans); font-size: 16.5px; line-height: 1.65;
+  margin: 0;
+}
+.wrap { max-width: 740px; margin: 0 auto; padding-inline: 20px; }
+a { color: var(--link); text-decoration: none; }
+a:hover { text-decoration: underline; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
+
+/* ---- Nav ---- */
+nav {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 10;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--rule);
+}
+nav .wrap { display: flex; align-items: baseline; gap: 18px; flex-wrap: wrap; padding-block: 10px; }
+nav .brand { font-family: var(--serif); font-weight: 600; font-size: 1.05rem; color: var(--ink); margin-right: auto; }
+nav a.item { color: var(--muted); font-size: .86rem; letter-spacing: .02em; }
+nav a.item:hover { color: var(--ink); text-decoration: none; }
+
+/* ---- Hero ---- */
+header.hero { padding-block: 56px 40px; border-bottom: 1px solid var(--rule); }
+.hero-grid { display: flex; gap: 40px; align-items: flex-start; }
+.hero-text { flex: 1; min-width: 0; }
+.portrait {
+  width: 190px; max-width: 100%; aspect-ratio: 4 / 5; object-fit: cover;
+  border-radius: 10px; border: 1px solid var(--rule); flex-shrink: 0;
+  margin-top: 6px;
+}
+@media (max-width: 620px) {
+  .hero-grid { flex-direction: column-reverse; }
+  .portrait { width: 150px; }
+}
+.eyebrow {
+  font-size: .76rem; letter-spacing: .14em; text-transform: uppercase;
+  color: var(--accent); font-weight: 600; margin: 0 0 14px;
+}
+h1 { font-family: var(--serif); font-weight: 600; font-size: clamp(2.1rem, 6vw, 2.9rem); line-height: 1.1; margin: 0 0 10px; text-wrap: balance; }
+.role { font-size: 1.02rem; color: var(--muted); margin: 0 0 4px; }
+.role b { color: var(--ink); font-weight: 600; }
+.market {
+  display: inline-block; margin-top: 14px; padding: 3px 11px;
+  border: 1px solid var(--accent); border-radius: 999px;
+  color: var(--accent); font-size: .8rem; font-weight: 600; letter-spacing: .03em;
+}
+.lede { font-family: var(--serif); font-size: 1.14rem; line-height: 1.6; margin: 22px 0 0; max-width: 62ch; }
+.chain { margin-top: 26px; color: var(--muted); }
+.actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; }
+.actions a, .actions button {
+  display: inline-flex; align-items: center; gap: 7px;
+  border: 1px solid var(--rule); background: var(--surface); color: var(--ink);
+  font-family: var(--sans); font-size: .88rem; font-weight: 500;
+  padding: 7px 14px; border-radius: 6px; cursor: pointer;
+}
+.actions a:hover, .actions button:hover { border-color: var(--accent); text-decoration: none; }
+.actions .primary { background: var(--accent); border-color: var(--accent); color: var(--bg); }
+.actions .primary:hover { opacity: .92; }
+
+/* ---- Sections ---- */
+section { padding-block: 40px; border-bottom: 1px solid var(--rule); }
+section:last-of-type { border-bottom: none; }
+h2 { font-family: var(--serif); font-weight: 600; font-size: 1.5rem; margin: 6px 0 18px; text-wrap: balance; }
+h3 { font-family: var(--serif); font-weight: 600; font-size: 1.08rem; margin: 26px 0 8px; }
+p { margin: 0 0 14px; }
+.muted { color: var(--muted); }
+.small { font-size: .88rem; }
+
+/* Research streams */
+.stream { margin-bottom: 22px; }
+.stream h3 { margin-top: 0; }
+.stream .tagline { color: var(--muted); font-size: .85rem; letter-spacing: .02em; margin: 0 0 6px; }
+.tags { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 18px; }
+.tags span { background: var(--chip); border-radius: 4px; padding: 3px 9px; font-size: .8rem; color: var(--muted); }
+
+/* Publications */
+.pub { margin: 0 0 16px; padding-left: 16px; border-left: 2px solid var(--rule); }
+.pub .authors { font-size: .9rem; color: var(--muted); }
+.pub .title { font-family: var(--serif); font-size: 1.02rem; }
+.pub .venue { font-size: .9rem; }
+.pub .venue i { color: var(--ink); }
+.jmpbadge {
+  display: inline-block; background: var(--accent); color: var(--bg);
+  font-size: .68rem; font-weight: 600; letter-spacing: .09em; text-transform: uppercase;
+  padding: 2px 9px; border-radius: 4px; margin-bottom: 7px;
+}
+.pub.jmp { border-left-color: var(--accent); }
+.statuslbl {
+  font-size: .72rem; font-weight: 600; letter-spacing: .09em; text-transform: uppercase;
+  color: var(--accent); display: block; margin: 20px 0 10px;
+}
+
+/* Video */
+.videobox { background: var(--surface); border: 1px solid var(--rule); border-radius: 8px; padding: 10px; }
+.videobox video { width: 100%; max-width: 100%; display: block; border-radius: 5px; background: #000; }
+.caption { font-size: .85rem; color: var(--muted); margin: 10px 4px 2px; }
+
+/* Teaching */
+ul.plain { list-style: none; margin: 0 0 14px; padding: 0; display: grid; gap: 8px; }
+ul.plain li { padding-left: 18px; position: relative; }
+ul.plain li::before { content: "–"; position: absolute; left: 0; color: var(--accent); }
+.evidence { margin-top: 20px; }
+.evidence .figs { display: flex; flex-wrap: wrap; gap: 28px; margin-bottom: 10px; }
+.evidence .fig b { font-family: var(--serif); font-size: 1.45rem; font-weight: 600; font-variant-numeric: tabular-nums; display: block; line-height: 1.2; }
+.evidence .fig span { font-size: .8rem; color: var(--muted); }
+
+/* Two-column compact lists */
+.cols { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+.cols > div { min-width: 0; }
+@media (max-width: 620px) { .cols { grid-template-columns: 1fr; } }
+
+/* Contact */
+.contactrow { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-bottom: 8px; }
+.contactrow code {
+  font-family: var(--sans); font-size: .95rem; background: var(--chip);
+  padding: 4px 10px; border-radius: 5px; user-select: all;
+}
+.refs { margin-top: 10px; display: grid; gap: 10px; }
+.refs .ref b { font-weight: 600; }
+footer { padding-block: 26px 40px; color: var(--muted); font-size: .84rem; }
+@media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
+html { scroll-behavior: smooth; }
+</style>
+
+<nav>
+  <div class="wrap">
+    <span class="brand">Saha Malaki</span>
+    <a class="item" href="#research">Research</a>
+    <a class="item" href="#publications">Publications</a>
+    <a class="item" href="#talk">Talk</a>
+    <a class="item" href="#teaching">Teaching</a>
+    <a class="item" href="#contact">Contact</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="hero-text">
+        <p class="eyebrow">Operations Management &middot; Decision Sciences</p>
+        <h1>Saha Malaki</h1>
+        <p class="role"><b>Postdoctoral Fellow</b>, Rotman School of Management, University of Toronto</p>
+        <p class="role small">Ph.D. in Operations Management, Bayes Business School, City, University of London</p>
+        <span class="market">On the 2026&ndash;27 academic job market</span>
+      </div>
+      <img class="portrait" src="portrait.jpg" alt="Portrait of Saha Malaki">
+    </div>
+    <p class="lede">I build decision models for service systems under uncertainty &mdash; combining stochastic optimization, queueing, and game theory with real operational data to improve access to healthcare and public services.</p>
+    <svg class="chain" width="340" height="44" viewBox="0 0 340 44" role="img" aria-label="A birth–death Markov chain diagram" style="max-width:100%">
+      <defs><marker id="ah" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L8 4 L0 8 z" fill="currentColor"/></marker></defs>
+      <g fill="none" stroke="currentColor" stroke-width="1.3" opacity="0.55">
+        <circle cx="30" cy="22" r="12"/><circle cx="130" cy="22" r="12"/><circle cx="230" cy="22" r="12"/>
+        <path d="M46 16 C 70 6, 90 6, 114 16" marker-end="url(#ah)"/>
+        <path d="M114 28 C 90 38, 70 38, 46 28" marker-end="url(#ah)"/>
+        <path d="M146 16 C 170 6, 190 6, 214 16" marker-end="url(#ah)"/>
+        <path d="M214 28 C 190 38, 170 38, 146 28" marker-end="url(#ah)"/>
+        <path d="M246 22 L 280 22" stroke-dasharray="2 5"/>
+      </g>
+      <g fill="currentColor" font-size="10" font-family="STIX Two Text, serif" font-style="italic" opacity="0.7">
+        <text x="76" y="9">&#955;</text><text x="176" y="9">&#955;</text>
+        <text x="76" y="43">&#956;</text><text x="174" y="43">2&#956;</text>
+      </g>
+    </svg>
+    <div class="actions">
+      <a class="primary" href="Saha_Malaki_CV.pdf" target="_blank" rel="noopener">Curriculum Vitae (PDF)</a>
+      <a href="https://scholar.google.com/citations?user=Vqt2OWwAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
+      <a href="https://www.linkedin.com/in/Saha-Malaki" target="_blank" rel="noopener">LinkedIn</a>
+      <button id="copyEmail" type="button" title="Copy email address">Copy email</button>
+    </div>
+  </div>
+</header>
+
+<section id="about">
+  <div class="wrap">
+    <p class="eyebrow">About</p>
+    <p>I am a Postdoctoral Fellow at the Rotman School of Management, University of Toronto, working with Olga Bountali on access to recurrent services, motivated by dialysis care for uninsured patients. Before Rotman, I was a Postdoctoral Associate at Western University, where I studied funding policies for autism services with Felipe Rodrigues, Greg Zaric, and Salar Ghamat. I completed my Ph.D. in Operations Management at Bayes Business School, City, University of London, where my dissertation developed optimization models for healthcare workforce planning; both dissertation papers appear in the <i>European Journal of Operational Research</i>. My earlier training is in industrial engineering, with an M.Sc. from the University of Alberta.</p>
+  </div>
+</section>
+
+<section id="research">
+  <div class="wrap">
+    <p class="eyebrow">Research</p>
+    <h2>Decision models for services under uncertainty</h2>
+
+    <div class="stream">
+      <p class="tagline">Stochastic optimization &middot; Markov decision processes &middot; hospital data</p>
+      <h3>Healthcare workforce planning</h3>
+      <p>How should a hospital balance inexpensive permanent staff, hired with long lead times, against costly agency staff available on short notice? My dissertation developed a two-stage stochastic program with an embedded queueing model for mid-term recruitment (EJOR&nbsp;2023) and a Markov decision process for long-term planning under demand information asymmetry (EJOR&nbsp;2027). Both were calibrated to large-scale inpatient data and informed the partner hospital&rsquo;s nurse recruitment decisions.</p>
+    </div>
+
+    <div class="stream">
+      <p class="tagline">Queueing games &middot; contract design &middot; policy evaluation</p>
+      <h3>Access to public services</h3>
+      <p>Families seeking publicly funded autism services face multi-year waits and a strategic choice: wait for public funding or pay privately in the meantime. My queueing-game analysis of the Ontario Autism Program &mdash; my job market paper &mdash; shows that calibrated rebate mechanisms can cut expected waiting times and move the decentralized system toward the social optimum (invited to resubmit at <i>POM</i>). At Rotman, I am extending this line to recurrent service access and strategic re-entry &mdash; when patients who leave a system should return, and how providers should manage reassessment.</p>
+    </div>
+
+    <div class="stream">
+      <p class="tagline">Game theory &middot; pricing &middot; regulation</p>
+      <h3>Pharmaceutical competition</h3>
+      <p>I model pricing competition and market access between brand and generic manufacturers after patent expiration, asking how regulatory and pricing policy shape market dynamics and welfare.</p>
+    </div>
+
+    <p>Looking ahead, I aim to integrate machine learning with stochastic optimization and game-theoretic modeling to build adaptive decision models for settings where demand and behavior evolve over time.</p>
+
+    <div class="tags">
+      <span>stochastic optimization</span><span>queueing theory</span><span>Markov decision processes</span>
+      <span>game theory</span><span>discrete-event simulation</span><span>healthcare operations</span>
+      <span>public-service access</span><span>data analytics</span>
+    </div>
+  </div>
+</section>
+
+<section id="publications">
+  <div class="wrap">
+    <p class="eyebrow">Publications</p>
+    <h2>Publications &amp; working papers</h2>
+
+    <span class="statuslbl">Peer-reviewed journal articles</span>
+    <div class="pub">
+      <div class="authors">Saha Malaki, Navid Izady, Oben Ceryan, Lilian M. de Menezes</div>
+      <div class="title"><a href="https://doi.org/10.1016/j.ejor.2026.08.017" target="_blank" rel="noopener">Optimal Recruitment of Temporary and Permanent Healthcare Workers in Highly Uncertain Environments: A Long-Term Scenario</a></div>
+      <div class="venue"><i>European Journal of Operational Research</i>, 336(1):208&ndash;223, 2027</div>
+    </div>
+    <div class="pub">
+      <div class="authors">Saha Malaki, Navid Izady, Lilian M. de Menezes</div>
+      <div class="title"><a href="https://doi.org/10.1016/j.ejor.2022.12.008" target="_blank" rel="noopener">A Framework for Optimal Recruitment of Temporary and Permanent Healthcare Workers in Highly Uncertain Environments</a></div>
+      <div class="venue"><i>European Journal of Operational Research</i>, 308(2):768&ndash;781, 2023</div>
+    </div>
+
+    <span class="statuslbl">Resubmission in preparation</span>
+    <div class="pub jmp">
+      <span class="jmpbadge">Job Market Paper</span>
+      <div class="authors">Saha Malaki, Felipe Rodrigues, Salar Ghamat, Greg Zaric, Camila de Souza</div>
+      <div class="title"><a href="Malaki_OAP_JobMarketPaper.pdf" target="_blank" rel="noopener">Optimal Contract Policies for Improving Access to Child and Youth Public Services: The Case of Ontario Autism Program</a></div>
+      <div class="venue">Invited to resubmit at <i>Production and Operations Management</i>; resubmission in preparation</div>
+      <div class="venue muted small"><a href="Malaki_OAP_JobMarketPaper.pdf" target="_blank" rel="noopener">PDF</a> &middot; originally submitted version</div>
+    </div>
+
+    <span class="statuslbl">Working papers</span>
+    <div class="pub">
+      <div class="title">Strategic Re-entry in Recurrent Service Systems: When to Return and How to Manage Reassessment</div>
+      <div class="venue muted">University of Toronto</div>
+    </div>
+    <div class="pub">
+      <div class="title">Pricing Competition and Market Access in the Post-Patent Pharmaceutical Market: A Game-Theoretic Approach</div>
+      <div class="venue muted">Western University</div>
+    </div>
+
+    <span class="statuslbl">Peer-reviewed conference proceeding</span>
+    <div class="pub">
+      <div class="authors">Saha Malaki, Firouz Khodayari, Yashar Pourrahimian, Wei Victor Liu</div>
+      <div class="title"><a href="https://doi.org/10.36487/ACG_rep/1710_25_Pourrahimian" target="_blank" rel="noopener">An Application of Mathematical Programming and Sequential Gaussian Simulation for Block Cave Production Scheduling</a></div>
+      <div class="venue"><i>Proceedings of the First International Conference on Underground Mining Technology</i>, 323&ndash;337, 2017</div>
+    </div>
+  </div>
+</section>
+
+<section id="talk">
+  <div class="wrap">
+    <p class="eyebrow">Research talk</p>
+    <h2>My doctoral research, in ten minutes</h2>
+    <div class="videobox">
+      <video controls preload="metadata" poster="talk-poster.jpg">
+        <source src="talk.mp4" type="video/mp4">
+        Your browser does not support embedded video.
+      </video>
+      <p class="caption">A short introduction to my Ph.D. research on optimal recruitment of temporary and permanent healthcare workers, recorded for the graduate Workforce Analytics course at Imperial College Business School (February 2020).</p>
+    </div>
+  </div>
+</section>
+
+<section id="teaching">
+  <div class="wrap">
+    <p class="eyebrow">Teaching</p>
+    <h2>Teaching experience</h2>
+    <p>I have taught analytics, quantitative methods, and operations courses at the undergraduate and graduate levels across five institutions, including Imperial College Business School, London Business School, and Bayes Business School. At Imperial, I designed and delivered the Support Vector Machines session of the graduate <i>Workforce Analytics</i> course; my materials were incorporated into the permanent curriculum. At Bayes, I served as a substitute lecturer in <i>Quantitative Methods and Analytics</i> on several occasions between 2018 and 2022, with full responsibility for delivering class sessions. I am an Associate Fellow of the Higher Education Academy (AFHEA), a formal certification in evidence-based teaching.</p>
+    <p>As a graduate teaching assistant, I supported <i>Data Analytics for Management</i> and <i>Data Analytics for Business</i> (London Business School), <i>Workforce Analytics</i> (Imperial College), <i>Supply Chain Management Analytics</i> and <i>Business Forecasting and Data Analytics</i> (University of London), and <i>Operations Management</i> (Bayes), alongside undergraduate courses at Bayes and the University of Alberta.</p>
+
+    <h3>Teaching areas</h3>
+    <p class="muted">Operations management &middot; supply chain analytics &middot; business statistics &middot; forecasting &middot; simulation &middot; optimization &middot; machine learning for business &middot; quantitative methods for decision-making</p>
+  </div>
+</section>
+
+<section id="activity">
+  <div class="wrap">
+    <p class="eyebrow">Activity</p>
+    <div class="cols">
+      <div>
+        <h3 style="margin-top:0">Selected presentations</h3>
+        <ul class="plain small">
+          <li>INFORMS Annual Meeting, Seattle, 2024</li>
+          <li>CORS Conference, London ON, 2024</li>
+          <li>MSOM Conference, Munich, 2022</li>
+          <li>INFORMS Healthcare, online, 2021</li>
+          <li>POMS Conference, Brighton, 2019</li>
+        </ul>
+      </div>
+      <div>
+        <h3 style="margin-top:0">Service &amp; mentoring</h3>
+        <ul class="plain small">
+          <li>Referee, <i>Health Care Management Science</i></li>
+          <li>Mentored two master&rsquo;s students on simulation models of healthcare systems</li>
+          <li>Co-authored a 2025 SSHRC Insight Grant application</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <p class="eyebrow">Contact</p>
+    <h2>Get in touch</h2>
+    <div class="contactrow">
+      <code id="emailText">saha.malaki@utoronto.ca</code>
+      <button id="copyEmail2" class="small" type="button" style="border:1px solid var(--rule);background:var(--surface);color:var(--ink);padding:5px 12px;border-radius:6px;cursor:pointer">Copy</button>
+      <span id="copiedNote" class="small muted" hidden>Copied</span>
+    </div>
+    <p class="small muted">Seattle, WA, USA &middot; <a href="https://scholar.google.com/citations?user=Vqt2OWwAAAAJ" target="_blank" rel="noopener">Google Scholar</a> &middot; <a href="https://www.linkedin.com/in/Saha-Malaki" target="_blank" rel="noopener">LinkedIn</a> &middot; <a href="Saha_Malaki_CV.pdf" target="_blank" rel="noopener">Full CV (PDF)</a></p>
+
+    <h3>References</h3>
+    <div class="refs small">
+      <div class="ref"><b><a href="https://www.rotman.utoronto.ca/the-rotman-experience/our-community/people/bountali-olga-/" target="_blank" rel="noopener">Olga Bountali</a></b> &mdash; Assistant Professor, Rotman School of Management, University of Toronto (current postdoctoral supervisor)</div>
+      <div class="ref"><b><a href="https://www.ivey.uwo.ca/executive-education/about/faculty/greg-zaric/" target="_blank" rel="noopener">Greg Zaric</a></b> &mdash; Professor of Management Science, Ivey Business School, Western University</div>
+      <div class="ref"><b><a href="https://www.kings.uwo.ca/academics/faculty-info/member-profile/?doaction=getProfile&amp;id=frodrig7" target="_blank" rel="noopener">Felipe Rodrigues</a></b> &mdash; Associate Professor, King&rsquo;s University College, Western University</div>
+      <div class="ref"><b><a href="https://www.bayes.citystgeorges.ac.uk/faculties-and-research/experts/navid-izady" target="_blank" rel="noopener">Navid Izady</a></b> &mdash; Reader in Operations &amp; Supply Chain, Bayes Business School (Ph.D. supervisor)</div>
+      <div class="ref"><b><a href="https://www.bayes.citystgeorges.ac.uk/faculties-and-research/experts/lilian-m-de-menezes" target="_blank" rel="noopener">Lilian M. de Menezes</a></b> &mdash; Professor of Decision Sciences, Bayes Business School (Ph.D. supervisor)</div>
+    </div>
+    <p class="small muted" style="margin-top:12px">Reference contact details are listed in my CV.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">Saha Malaki &middot; 2026</div>
+</footer>
+
+<script>
+(function () {
+  var email = "saha.malaki@utoronto.ca";
+  function wire(btnId) {
+    var btn = document.getElementById(btnId);
+    if (!btn) return;
+    btn.addEventListener("click", function () {
+      function done() {
+        var note = document.getElementById("copiedNote");
+        if (note) { note.hidden = false; setTimeout(function(){ note.hidden = true; }, 2000); }
+        btn.textContent = "Copied!";
+        setTimeout(function(){ btn.textContent = btnId === "copyEmail" ? "Copy email" : "Copy"; }, 2000);
+      }
+      try {
+        navigator.clipboard.writeText(email).then(done, fallback);
+      } catch (e) { fallback(); }
+      function fallback() {
+        var t = document.getElementById("emailText");
+        if (t) {
+          var r = document.createRange(); r.selectNodeContents(t);
+          var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+        }
+        done();
+      }
+    });
+  }
+  wire("copyEmail"); wire("copyEmail2");
+})();
+</script>
+
+</body>
+</html>
